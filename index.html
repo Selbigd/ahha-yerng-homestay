@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahha Yerng Home Stay | Cambodia</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf7f0;
+      color: #26372c;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #244b38;
+      color: white;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: #e8d5a5;
+      font-size: 13px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 440px;
+      padding: 75px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(15, 35, 24, 0.58),
+        rgba(15, 35, 24, 0.58)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(36px, 6vw, 58px);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    .gold {
+      background: #d6b56d;
+      color: #203a2b;
+    }
+
+    .green {
+      background: #16865b;
+      color: white;
+    }
+
+    section {
+      padding: 60px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #70776f;
+    }
+
+    .rooms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .room-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: 0.25s;
+    }
+
+    .room-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .room-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .room-info {
+      padding: 22px;
+    }
+
+    .room-info h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .room-info p {
+      color: #6d746d;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .price {
+      color: #276444;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .price span {
+      font-size: 13px;
+      font-weight: normal;
+      color: #777;
+    }
+
+    .room-info .button {
+      display: block;
+      text-align: center;
+      margin: 0;
+    }
+
+    .about {
+      background: #eae8dc;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 15px auto 0;
+      color: #59635a;
+    }
+
+    .contact {
+      background: #244b38;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 12px 0;
+    }
+
+    .contact a:not(.button) {
+      color: #f0d58f;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #183427;
+      color: #d9e0d9;
+      padding: 20px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        min-height: 380px;
+      }
+
+      section {
+        padding: 45px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>Ahha Yerng Home Stay</h1>
+      <p>A peaceful Cambodian stay</p>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div>
+      <h2>Welcome to Ahha Yerng</h2>
+      <p>Feel at home. Experience the warmth of Cambodia.</p>
+
+      <a href="#rooms" class="button gold">Explore Our Rooms</a>
+      <a href="https://t.me/YOUR_TELEGRAM_USERNAME"
+         target="_blank" rel="noopener"
+         class="button green">Book on Telegram</a>
+    </div>
+  </section>
+
+  <section id="rooms">
+    <div class="section-title">
+      <h2>Our Rooms</h2>
+      <p>Comfortable rooms for your relaxing stay.</p>
+    </div>
+
+    <div class="rooms">
+
+      <!-- Room 1 -->
+      <article class="room-card">
+        <img
+          src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80"
+          alt="Comfortable home stay room">
+        <div class="room-info">
+          <h3>Standard Room</h3>
+          <p>Cozy and comfortable for your stay.</p>
+          <div class="price">$15 <span>/ night</span></div>
+          <a class="button green"
+             href="https://t.me/YOUR_TELEGRAM_USERNAME"
+             target="_blank" rel="noopener">Book This Room</a>
+        </div>
+      </article>
+
+      <!-- Room 2 -->
+      <article class="room-card">
+        <img
+          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80"
+          alt="Peaceful double room">
+        <div class="room-info">
+          <h3>Double Room</h3>
+          <p>A relaxing room for two guests.</p>
+          <div class="price">$20 <span>/ night</span></div>
+          <a class="button green"
+             href="https://t.me/YOUR_TELEGRAM_USERNAME"
+             target="_blank" rel="noopener">Book This Room</a>
+        </div>
+      </article>
+
+      <!-- Room 3 -->
+      <article class="room-card">
+        <img
+          src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80"
+          alt="Spacious home stay room">
+        <div class="room-info">
+          <h3>Deluxe Room</h3>
+          <p>Extra comfort for a lovely getaway.</p>
+          <div class="price">$25 <span>/ night</span></div>
+          <a class="button green"
+             href="https://t.me/YOUR_TELEGRAM_USERNAME"
+             target="_blank" rel="noopener">Book This Room</a>
+        </div>
+      </article>
+
+      <!-- Room 4 -->
+      <article class="room-card">
+        <img
+          src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&w=800&q=80"
+          alt="Beautiful spacious guest room">
+        <div class="room-info">
+          <h3>Family Room</h3>
+          <p>A spacious choice for families or friends.</p>
+          <div class="price">$30 <span>/ night</span></div>
+          <a class="button green"
+             href="https://t.me/YOUR_TELEGRAM_USERNAME"
+             target="_blank" rel="noopener">Book This Room</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="section-title">
+      <h2>Your Home Away From Home</h2>
+    </div>
+    <p>
+      Welcome to Ahha Yerng Home Stay. We want every guest to feel
+      comfortable, relaxed, and welcomed. Contact us directly to ask
+      about room availability, prices, and your next stay.
+    </p>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-title">
+      <h2>Contact & Booking</h2>
+      <p style="color:#e1e8df">
+        Contact us directly to arrange your reservation.
+      </p>
+    </div>
+
+    <p>Phone: <a href="tel:+85569813960">
+      +85569813960</a></p>
+
+    <p>Telegram: <a href="https://t.me/urmanselnghx"
+       target="_blank" rel="noopener">
+       Chat with us on Telegram</a></p>
+
+    <a href="https://t.me/urmanselnghx"
+       target="_blank" rel="noopener"
+       class="button gold">Contact Us to Book</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Ahha Yerng Home Stay. All rights reserved.</p>
+    <p>Made with care in Cambodia.</p>
+  </footer>
+
+</body>
+</html>
